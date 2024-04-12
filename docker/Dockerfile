@@ -35,6 +35,9 @@ WORKDIR /app
 
 USER root
 
+# Update .NET workloads (avoids warning when running dotnet CLI in container)
+RUN dotnet workload update
+
 # Install dependencies:
 #   - Git and SSH are needed to work with Git repositories
 #   - Wine is needed to run Inno Setup when requested by projects
