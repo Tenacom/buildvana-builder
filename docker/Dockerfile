@@ -48,6 +48,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     openssh-client \
     osslsigncode
 
+# Tell git that /app is safe; same for /builds (used by GitLab CI)
+RUN git config --global --add safe.directory /app
+RUN git config --global --add safe.directory /builds
+
 # Install Wine from WineHQ
 # https://wiki.winehq.org/Ubuntu
 # xvfb is needed to run wine (which is an X11 client, even when running console apps) without a display
