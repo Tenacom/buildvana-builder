@@ -1,9 +1,14 @@
-Questo progetto contiene i componenti che implementano i workflow CI/CD per i progetti .NET.
+# buildvana-builder
 
-L'obiettivo è raggiungere, utilizzando il server GitLab di Isango, lo stesso grado di automazione di cui i progetti Tenacom usufruiscono su GitHub.
+[![License](https://badgen.net/badge/license/MIT/blue)](https://github.com/Tenacom/buildvana-builder/blob/main/LICENSE)
+[![Latest release](https://badgen.net/github/release/Tenacom/buildvana-builder?label=latest)](https://github.com/Tenacom/buildvana-builder/releases)
+[![Latest stable release](https://badgen.net/github/release/Tenacom/buildvana-builder/stable?label=stable)](https://github.com/Tenacom/buildvana-builder/releases)
+[![Changelog](https://badgen.net/badge/changelog/Keep%20a%20Changelog%20v1.0.0/orange)](https://github.com/Tenacom/buildvana-builder/blob/main/CHANGELOG.md)
 
-## Nota sul versioning
+[![CI](https://github.com/Tenacom/buildvana-builder/actions/workflows/ci.yml/badge.svg)](https://github.com/Tenacom/buildvana-builder/actions/workflows/ci.yml)
 
-Questo progetto è conforme alla specifica [Semantic Versioning 2.0.0](https://semver.org).
+![Repobeats analytics image](https://repobeats.axiom.co/api/embed/a172726c22a5da722df12bb9b00157b2595935c4.svg "Repobeats analytics image")
 
-La versione di questo progetto segue, per quanto riguarda _major version_ e _minor version_, quella dell'SDK .NET utilizzato; ad esempio, le versioni 8.0.x utilizzeranno .NET SDK 8.0.
+---
+
+Docker image to build .NET projects using [Buildvana.Cake](https://github.com/Tenacom/Buildvana.Cake) in GitLab CI.
