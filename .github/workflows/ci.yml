@@ -10,7 +10,7 @@ on:
 env:
   RELEASING: ${{ startsWith(github.ref, 'refs/tags/') }}
   DOCKERHUB_REPO: tenacom/buildvana-builder
-  TEST_TAG: ${{ env.DOCKERHUB_REPO }}:test
+  TEST_TAG: tenacom/buildvana-builder:test
 
 jobs:
   docker:
