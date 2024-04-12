@@ -43,7 +43,7 @@ jobs:
         load: true
         tags: ${{ env.TEST_TAG }}
     - name: Test
-      run: docker run --rm -v "${{ github.workspace}}:/app" ${{ env.TEST_TAG }} bash -c "(cd SampleProject && dotnet tool restore && dotnet cake --target pack)"
+      run: docker run --rm -v "${{ github.workspace}}:/app" ${{ env.TEST_TAG }} bash -c "(cd SampleProject $$ ls -la && dotnet tool restore && dotnet cake --target pack)"
     - name: Build and push
       if: fromJSON(env.PUBLISH_IMAGE)
       uses: docker/build-push-action@v5
