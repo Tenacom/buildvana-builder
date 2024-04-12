@@ -1,0 +1,6 @@
+﻿#ifndef _INNODOWNLOADPLUGIN_INCLUDED
+#define _INNODOWNLOADPLUGIN_INCLUDED
+
+#include <idp.iss>
+
+#endif

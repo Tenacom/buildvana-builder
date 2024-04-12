@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TestProjectType>UnitTest</TestProjectType>
+    <TargetFramework>$(BaseTFM)</TargetFramework>
+    <CLSCompliant>false</CLSCompliant>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\SampleProject.Library\SampleProject.Library.csproj" />
+  </ItemGroup>
+
+</Project>

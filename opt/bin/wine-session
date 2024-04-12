@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Initialize Wine session
+wineboot --init
+
+# Execute command and store exit code
+"$@"
+retval=$?
+
+# Shut down Wine
+wineboot --shutdown
+
+# Wait for Wine services to terminate
+# https://stackoverflow.com/a/61049456/5753412
+wineserver --wait
+
+exit $retval

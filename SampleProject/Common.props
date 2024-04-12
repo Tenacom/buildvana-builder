@@ -1,0 +1,42 @@
+<Project>
+
+  <!-- Branding, ownership, and licensing -->
+  <PropertyGroup>
+    <Product>SampleProject</Product>
+    <Authors>Riccardo De Agostini</Authors>
+    <Owners>Tenacom</Owners>
+    <Company>Tenacom</Company>
+    <Copyright>Copyright (C) $(Company) - All rights reserved</Copyright>
+    <CompanyWebSite>https://github.com/Tenacom</CompanyWebSite>
+    <CompanySupportPhone>info@tenacom.it</CompanySupportPhone>
+    <AppContact>info@tenacom.it</AppContact>
+  </PropertyGroup>
+
+  <!-- Common build options -->
+  <PropertyGroup>
+    <Deterministic>true</Deterministic>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <AnalysisMode>Default</AnalysisMode>
+    <CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <CLSCompliant>false</CLSCompliant>
+    <ComVisible>false</ComVisible>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+
+  <!-- Solution-wide build options -->
+  <PropertyGroup>
+    <BaseTFM>net8.0</BaseTFM>
+  </PropertyGroup>
+
+  <!-- Global warning suppressions -->
+  <PropertyGroup>
+    <NoWarn>$(NoWarn;)CA1303</NoWarn> <!-- Do not pass literals as localized parameters -->
+  </PropertyGroup>
+
+</Project>

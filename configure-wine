@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# ----------------------------------------------------------------------------
+#                    CONFIGURE WINE FOR THE CONTAINER
+# ----------------------------------------------------------------------------
+# This script must be run during the container's build process.
+# It does not need to be persisted.
+# ----------------------------------------------------------------------------
+# USAGE (in Dockerfile):
+#
+# COPY --chown=<username> --chmod=755 configure-wine /tmp/
+# RUN chmod +x /tmp/configure-wine \
+#     && x11-headless wine-session /tmp/configure-wine \
+#     && rm /tmp/configure-wine
+# ----------------------------------------------------------------------------
+
+# InnoSetup needs to see dotfiles in our project folder, hence ShowDotFiles=Y
+wine reg add 'HKEY_CURRENT_USER\Software\Wine' /v ShowDotFiles /t REG_SZ /d Y
+
+# Suppress crash dialogs, as we cannot interact with them on XVFB.
+wine reg add 'HKEY_CURRENT_USER\Software\Wine\WineDbg' /v ShowCrashDialog /t REG_DWORD /d 0
+
+# Uncomment the following line to verify registry changes in Docker's build log
+# wine reg query 'HKEY_CURRENT_USER\Software\Wine' /s

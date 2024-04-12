@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "- Configuration", "- Configuration", "{E4767BED-E763-409F-B684-E4FA02AAD01E}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.globalconfig = .globalconfig
+		Common.props = Common.props
+		Directory.Build.props = Directory.Build.props
+		Directory.Build.targets = Directory.Build.targets
+		NuGet.config = NuGet.config
+		stylecop.json = stylecop.json
+		version.json = version.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "- Dependencies", "- Dependencies", "{D8561343-A286-4CC9-961B-6A284769463B}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Packages.props = Directory.Packages.props
+		.config\dotnet-tools.json = .config\dotnet-tools.json
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "- Documentation", "- Documentation", "{436C553F-9434-430B-9704-7AA75AB58EB0}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+		THIRD-PARTY-NOTICES = THIRD-PARTY-NOTICES
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F183A7A3-D4BE-420D-8677-735017E97C70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{96606884-2350-4E03-8AED-10DB60F069A7}"
+	ProjectSection(SolutionItems) = preProject
+		tests\Common.props = tests\Common.props
+		tests\Common.targets = tests\Common.targets
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleProject.Library", "src\SampleProject.Library\SampleProject.Library.csproj", "{DB25D217-AD61-4E24-A587-64C217B40161}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryTests", "tests\LibraryTests\LibraryTests.csproj", "{91E136B1-69E7-4383-B63A-6F9100AEA9FD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleProject", "src\SampleProject\SampleProject.csproj", "{6E48C899-E27C-402A-85F9-6279A41A8838}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB25D217-AD61-4E24-A587-64C217B40161}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB25D217-AD61-4E24-A587-64C217B40161}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB25D217-AD61-4E24-A587-64C217B40161}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB25D217-AD61-4E24-A587-64C217B40161}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91E136B1-69E7-4383-B63A-6F9100AEA9FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91E136B1-69E7-4383-B63A-6F9100AEA9FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91E136B1-69E7-4383-B63A-6F9100AEA9FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91E136B1-69E7-4383-B63A-6F9100AEA9FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E48C899-E27C-402A-85F9-6279A41A8838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E48C899-E27C-402A-85F9-6279A41A8838}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E48C899-E27C-402A-85F9-6279A41A8838}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E48C899-E27C-402A-85F9-6279A41A8838}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DB25D217-AD61-4E24-A587-64C217B40161} = {F183A7A3-D4BE-420D-8677-735017E97C70}
+		{91E136B1-69E7-4383-B63A-6F9100AEA9FD} = {96606884-2350-4E03-8AED-10DB60F069A7}
+		{6E48C899-E27C-402A-85F9-6279A41A8838} = {F183A7A3-D4BE-420D-8677-735017E97C70}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {98D7EBA9-5C32-4F77-B165-80FAE5B38870}
+	EndGlobalSection
+EndGlobal

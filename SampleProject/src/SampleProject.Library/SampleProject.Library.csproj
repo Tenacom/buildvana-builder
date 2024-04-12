@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Title>Library for DotnetCITest</Title>
+    <Description>$(Title)</Description>
+    <TargetFramework>$(BaseTFM)</TargetFramework>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Kill XVFB if it is running.
+# Apparently xvfb-run doesn't shut it down properly;
+# then it complaints that "Xvfb cannot start" when it's already running.
+pgrep -l Xvfb && pkill -e Xvfb || rm -f /tmp/.X99-lock
+
+xvfb-run $@

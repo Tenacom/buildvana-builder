@@ -1,0 +1,4 @@
+#nullable enable
+SampleProject.Library.MagicUtility
+static SampleProject.Library.MagicUtility.GetTheAnswer() -> int
+static SampleProject.Library.MagicUtility.IsTheAnswer(int answer) -> bool
