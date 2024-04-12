@@ -63,7 +63,7 @@ RUN curl --location --output /usr/local/bin/release-cli "https://gitlab.com/api/
     && chmod +x /usr/local/bin/release-cli
 
 # Copy utility scripts and add them to PATH
-COPY opt /opt/
+COPY --chmod=755 opt /opt/
 ENV PATH $PATH:/opt/bin
 
 # ----------------------------------------------------------------------------
