@@ -32,6 +32,7 @@
   <!-- Solution-wide build options -->
   <PropertyGroup>
     <BaseTFM>net8.0</BaseTFM>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
   </PropertyGroup>
 
   <!-- Global warning suppressions -->
