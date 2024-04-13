@@ -11,6 +11,7 @@ This is a modifed version of [Peace](#peace). Modified by [@rdeago](https://gith
 Related files:
 
 - `PackageIcon.png` (512x512px)
+- `ApplicationIcon.ico` (16x16px,32bpp; 32x32px,32bpp; 48x48px,32bpp; 256x256px,32bpp)
 
 ## Third-party material
 
