@@ -1,0 +1,7 @@
+<Project>
+
+  <PropertyGroup>
+    <WineExecutionScript>/opt/bin/wine-run</WineExecutionScript>
+  </PropertyGroup>
+
+</Project>

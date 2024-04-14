@@ -73,6 +73,9 @@ RUN curl --location --output /usr/local/bin/release-cli "https://gitlab.com/api/
 COPY --chmod=755 opt /opt/
 ENV PATH $PATH:/opt/bin
 
+# Copy Buildvana configuration
+COPY --chmod=755 etc /etc/
+
 # ----------------------------------------------------------------------------
 #                         WINE CONFIGURATION FOR ROOT
 #
