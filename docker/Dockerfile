@@ -74,7 +74,30 @@ COPY --chmod=755 opt /opt/
 ENV PATH $PATH:/opt/bin
 
 # ----------------------------------------------------------------------------
-#                         USER-LEVEL CONFIGURATION
+#                         WINE CONFIGURATION FOR ROOT
+#
+# While the WineHQ team strongly advises against running Wine as root,
+# we have no choice, because e.g. GitLab runners will run containers as root.
+# ----------------------------------------------------------------------------
+
+# We want to use 32-bit Wine for InnoSetup
+ENV WINEARCH win32
+
+# Only show error messages from Wine
+ENV WINEDEBUG -all,err+all
+
+# Suppress prompts to install wine-gecko and wine-mono
+ENV WINEDLLOVERRIDES mscoree,mshtml=
+
+# Create Wine prefix and configure registry values
+COPY --chown=app --chmod=755 configure-wine /tmp/
+RUN x11-headless wine-session /tmp/configure-wine \
+    && rm /tmp/configure-wine
+
+# ----------------------------------------------------------------------------
+#                      WINE CONFIGURATION FOR NORMAL USER
+#
+# These should be the same instructions as in "Wine configuration for root".
 # ----------------------------------------------------------------------------
 
 USER app
