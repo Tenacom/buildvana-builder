@@ -16,8 +16,10 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
+    - name: Checkout with full history
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0 # Checkout with full history so nbgv can compute Git height correctly.
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
     - name: Generate Docker metadata
