@@ -6,3 +6,6 @@
 pgrep -l Xvfb && pkill -e Xvfb || rm -f /tmp/.X99-lock
 
 xvfb-run $@
+
+# Kill XVFB if it is still running (see above).
+pgrep -l Xvfb && pkill -e Xvfb || rm -f /tmp/.X99-lock
