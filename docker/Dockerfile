@@ -93,7 +93,7 @@ ENV WINEDEBUG -all,err+all
 ENV WINEDLLOVERRIDES mscoree,mshtml=
 
 # Create Wine prefix and configure registry values
-COPY --chown=app --chmod=755 configure-wine /tmp/
+COPY --chown=root --chmod=755 configure-wine /tmp/
 RUN x11-headless wine-session /tmp/configure-wine \
     && rm /tmp/configure-wine
 
