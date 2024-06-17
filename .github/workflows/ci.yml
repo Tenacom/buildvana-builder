@@ -43,7 +43,7 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Build and load into Docker
-      uses: docker/build-push-action@v5
+      uses: docker/build-push-action@v6
       with:
         context: ./docker
         load: true
@@ -52,7 +52,7 @@ jobs:
       run: docker run --rm -v "${{ github.workspace}}:/app" -u root ${{ env.TEST_TAG }} bash -c "(cd SampleProject && dotnet tool restore && dotnet cake --target pack)"
     - name: Build and push
       if: fromJSON(env.PUBLISH_IMAGE)
-      uses: docker/build-push-action@v5
+      uses: docker/build-push-action@v6
       with:
         context: ./docker
         push: ${{ env.PUBLISH_IMAGE }}
